@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vegan Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html"><div class="logo">V</div></a>
+            <a href="" class="navitem"></a>
+            <a href="" class="navitem"></a>
+            <a href="" class="navitem"></a>
+        </div>
+        <h1 class="heading">Recipe Search </h1>
+    </header>
+    <main class="mainContent">
+        <h2>Add ingredients to your list or search for a recipe.</h2>
+        <div class="searchByNameWrap">
+            <span>Search for a recipe</span>
+            <input type="text" id="name-search" placeholder="Search for a recipe">
+            <button class="button" id="search-by-name-button">Search</button>
+        </div>
+        <div id="search-results-container"></div>
+        <div class="searchByIngredientWrap">
+            <h2>Enter some ingredients to see what you can make.</h2>
+            <input type="text" id="ingredient-for-list" onkeypress="listenForEnter()" placeholder="Enter ingredients">
+            <button id="add-ingredient-button">Add ingredient</button>
+            
+        </div>
+        <div class="ingredientListWrap">
+            <ul id="ingredient-list">
+                
+            </ul>
+            <button class="button" id="search-by-ingredient-button">Search</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

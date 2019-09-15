@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+main {
+    width: 100vw;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}
+
+#search-results-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1em;
+}
+
+#ingredient-list {
+    color: red;
+    font-size: 2em;
+}
+
+IMG {
+    max-width: 15vw;
+}
+
+.recipe-container {
+    margin: 1em;
+    width: 15vw;
+}
