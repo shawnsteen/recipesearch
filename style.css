@@ -34,10 +34,10 @@ li {
 }
 
 IMG {
-    max-width: 15vw;
+    max-width: 10em;
 }
 
 .recipe-container {
     margin: 1em;
-    width: 15vw;
+    width: 10em;
 }
