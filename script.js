@@ -1,10 +1,10 @@
-//wait for load then initilize
+
 let myIngredients;
 let ingredientArr = [];
 const myApi = "22c8aa84037abb1538e4543b87437041";
 let ingredientList = document.getElementById('ingredient-list');
 let ingredientForList = document.querySelector('#ingredient-for-list');
-
+//wait for load then initilize
 window.onload = function init() {
     main();
  }
@@ -19,8 +19,6 @@ function main() {
     
     const searchByIngredientButton = document.querySelector('#search-by-ingredient-button');
     searchByIngredientButton.addEventListener("click", searchByIngredients);
-    // makeIngredientList();
-    // searchByIngredients();
     
 }
 
@@ -41,18 +39,19 @@ function displayResults(results) {
     let titles = [];
     let linkLocation = [];
     let searchResultsContainer = document.querySelector('#search-results-container');
-    for(let i = 0; i < myRecipes.length; i++) {
+    myRecipes.forEach(function(ele, i) {
         images.push(myRecipes[i].image_url);
         titles.push(myRecipes[i].title);
         linkLocation.push(myRecipes[i].f2f_url);
         //console.log(myRecipes[i]);
-    }
+    })
 
     myRecipes.forEach(function(ele, index) {
         let newRecipeContainer = document.createElement('a');
         let newTitle = document.createElement('span')
         let newImage = document.createElement('IMG');
         newRecipeContainer.href = linkLocation[index];
+        newRecipeContainer.target = '-blank';
         newRecipeContainer.classList.add('recipe-container')
         newTitle.innerText = titles[index];
         newImage.src = images[index];
@@ -87,8 +86,7 @@ function searchByIngredients() {
     ingredientArr.forEach(function(ele, index) {
         myIngredients += ele + ", "
     })
-    //  console.log(name.value);
-    //  console.log(searchUrl);
+
     fetch("https://www.food2fork.com/api/search?key=" + myApi + "&q=" + myIngredients)
     .then(data=>{return(data.json())})
     .then(res=>{displayResults(res)});

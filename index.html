@@ -10,24 +10,17 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
-            <a href="index.html"><div class="logo">V</div></a>
-            <a href="" class="navitem"></a>
-            <a href="" class="navitem"></a>
-            <a href="" class="navitem"></a>
-        </div>
         <h1 class="heading">Recipe Search </h1>
     </header>
     <main class="mainContent">
-        <h2>Add ingredients to your list or search for a recipe.</h2>
+        <h2 class="main-heading">Search for a recipe</h2>
         <div class="searchByNameWrap">
-            <span>Search for a recipe</span>
             <input type="text" id="name-search" placeholder="Search for a recipe">
             <button class="button" id="search-by-name-button">Search</button>
         </div>
         <div id="search-results-container"></div>
+        <h2 id="ingredient-list-heading">Add some ingredients to your list</h2>
         <div class="searchByIngredientWrap">
-            <h2>Enter some ingredients to see what you can make.</h2>
             <input type="text" id="ingredient-for-list" onkeypress="listenForEnter()" placeholder="Enter ingredients">
             <button id="add-ingredient-button">Add ingredient</button>
             
@@ -36,7 +29,10 @@
             <ul id="ingredient-list">
                 
             </ul>
-            <button class="button" id="search-by-ingredient-button">Search</button>
+            <div class="ingredient-list-controls">
+                <button class="button" id="clear-list">Clear List</button>
+                <button class="button" id="search-by-ingredient-button">Search</button>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>
